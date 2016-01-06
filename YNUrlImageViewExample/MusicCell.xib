@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="musicCollectionCell" id="gTV-IL-0wX" customClass="MusicCell">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="254"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="254"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mLC-Ca-ffE" customClass="YNUrlImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="342" height="254"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tar-Fx-Lin">
+                        <rect key="frame" x="8" y="111.5" width="326" height="30"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="mLC-Ca-ffE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1o9-hp-uUW"/>
+                <constraint firstAttribute="bottom" secondItem="mLC-Ca-ffE" secondAttribute="bottom" id="59e-8W-MjF"/>
+                <constraint firstItem="Tar-Fx-Lin" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="BZL-8j-dd0"/>
+                <constraint firstAttribute="trailing" secondItem="mLC-Ca-ffE" secondAttribute="trailing" id="ZYU-Ui-x9C"/>
+                <constraint firstItem="mLC-Ca-ffE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Zw3-hM-OM9"/>
+                <constraint firstItem="Tar-Fx-Lin" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="b72-9A-oWI"/>
+                <constraint firstAttribute="trailing" secondItem="Tar-Fx-Lin" secondAttribute="trailing" constant="8" id="kKR-LE-XRU"/>
+            </constraints>
+            <size key="customSize" width="342" height="254"/>
+            <connections>
+                <outlet property="imageViewPoster" destination="mLC-Ca-ffE" id="xSB-ow-myo"/>
+                <outlet property="labelTitle" destination="Tar-Fx-Lin" id="3q9-Pz-NT7"/>
+            </connections>
+            <point key="canvasLocation" x="261" y="184"/>
+        </collectionViewCell>
+    </objects>
+</document>

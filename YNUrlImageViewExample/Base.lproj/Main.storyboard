@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6nQ-wg-dnN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Dyl-nr-KHh">
+            <objects>
+                <navigationController id="6nQ-wg-dnN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nVO-af-CUC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dly-Rh-yt0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8a-64-Vgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-392" y="375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EkD-2W-R1t">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0Qo-eZ-nZd">
+                                    <size key="itemSize" width="238" height="208"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WfP-UQ-yHd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ie0-DS-hmt"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AZx-Zu-fpp">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I14-2h-eio">
+                                <rect key="frame" x="270" y="285" width="60" height="30"/>
+                                <state key="normal" title="重新下載"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EkD-2W-R1t" secondAttribute="bottom" id="3dH-q0-QCc"/>
+                            <constraint firstItem="EkD-2W-R1t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EUD-kQ-5gc"/>
+                            <constraint firstItem="EkD-2W-R1t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H1n-CM-5ig"/>
+                            <constraint firstItem="AZx-Zu-fpp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TgI-Cf-3YK"/>
+                            <constraint firstItem="I14-2h-eio" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TrH-FJ-BCz"/>
+                            <constraint firstAttribute="trailing" secondItem="EkD-2W-R1t" secondAttribute="trailing" id="V4e-gD-xI5"/>
+                            <constraint firstItem="I14-2h-eio" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbp-CP-dlj"/>
+                            <constraint firstItem="AZx-Zu-fpp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kHp-EO-z1M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kd3-vb-tzD"/>
+                    <connections>
+                        <outlet property="btnReDownload" destination="I14-2h-eio" id="uni-9Q-1wA"/>
+                        <outlet property="indicatorView" destination="AZx-Zu-fpp" id="2LA-HW-NiI"/>
+                        <outlet property="viewCollectionMusic" destination="EkD-2W-R1t" id="yks-sB-EMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="375"/>
+        </scene>
+    </scenes>
+</document>
